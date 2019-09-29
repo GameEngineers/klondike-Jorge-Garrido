@@ -8,7 +8,7 @@ public class Game {
 
     private Stock stock;
 
-    private Waste waste;
+    private Stack<Card> waste;
 
     private Map<Suit, Foundation> foundations;
 
@@ -20,7 +20,7 @@ public class Game {
 
     public void clear() {
         this.stock = new Stock();
-        this.waste = new Waste();
+        this.waste = new Stack<>();
         this.foundations = new HashMap<>();
         for (Suit suit : Suit.values()) {
             this.foundations.put(suit, new Foundation(suit));
@@ -155,7 +155,7 @@ public class Game {
         return this.peekIfNotEmpty(this.foundations.get(suit));
     }
 
-    private Card peekIfNotEmpty(CardStack cardStack) {
+    private Card peekIfNotEmpty(Stack<Card> cardStack) {
         if (cardStack.empty()) {
             return null;
         } else {

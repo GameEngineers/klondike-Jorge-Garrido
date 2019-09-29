@@ -1,6 +1,8 @@
 package klondike.models;
 
-public class Foundation extends CardStack {
+import java.util.Stack;
+
+public class Foundation extends Stack<Card> {
 
     private Suit suit;
 
@@ -10,7 +12,7 @@ public class Foundation extends CardStack {
     }
 
     public boolean isComplete() {
-        return this.cards.size() == Number.values().length;
+        return this.size() == Number.values().length;
     }
 
     public boolean fitsIn(Card card) {

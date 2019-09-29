@@ -17,7 +17,7 @@ public class PileView {
         this.index = index;
     }
 
-    public void writeln() {
+    public void write() {
         Stack<Card> cards = this.controller.getPileCards(index);
         int numberOfFaceUpCards = this.controller.getNumberOfFaceUpCardsInPile(index);
         int numberOfFaceDownCards = cards.size() - numberOfFaceUpCards;

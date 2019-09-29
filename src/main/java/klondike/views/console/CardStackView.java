@@ -15,7 +15,7 @@ public abstract class CardStackView {
         this.title = title;
     }
 
-    protected void writeln(Card card) {
+    protected void write(Card card) {
         IO.write(title);
         if (card == null)
             IO.writeln(Message.EMPTY);
@@ -23,5 +23,5 @@ public abstract class CardStackView {
             new CardView(card).writeln();
     }
 
-    public abstract void writeln();
+    public abstract void write();
 }

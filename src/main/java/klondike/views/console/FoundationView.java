@@ -14,8 +14,8 @@ public class FoundationView extends CardStackView {
     }
 
 
-    public void writeln() {
+    public void write() {
         IO.writetab();
-        super.writeln(this.controller.peekFoundation(suit));
+        super.write(this.controller.peekFoundation(suit));
     }
 }

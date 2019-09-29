@@ -18,13 +18,13 @@ public class ConsoleView extends View {
     @Override
     public void visit(StartController startController) {
         startController.start();
-        new GameView(startController).writeln();
+        new GameView(startController).write();
     }
 
     @Override
     public void visit(MoveController moveController) {
         new PlayMenu(moveController).execute();
-        new GameView(moveController).writeln();
+        new GameView(moveController).write();
     }
 
     @Override

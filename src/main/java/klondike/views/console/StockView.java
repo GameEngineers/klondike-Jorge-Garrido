@@ -8,7 +8,7 @@ public class StockView extends CardStackView {
         super(controller, Message.STOCK_TITLE);
     }
 
-    public void writeln() {
-        super.writeln(this.controller.peekStock());
+    public void write() {
+        super.write(this.controller.peekStock());
     }
 }

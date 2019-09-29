@@ -14,18 +14,18 @@ public class GameView {
         this.controller = controller;
     }
 
-    public void writeln() {
+    public void write() {
         IO.writeln();
         IO.writeln(Message.GAME_TITLE);
-        new StockView(this.controller).writeln();
-        new WasteView(this.controller).writeln();
+        new StockView(this.controller).write();
+        new WasteView(this.controller).write();
         IO.writeln(Message.FOUNDATIONS_TITLE);
         for (Suit suit : Suit.values()) {
-            new FoundationView(this.controller, suit).writeln();
+            new FoundationView(this.controller, suit).write();
         }
         IO.writeln(Message.PILES_TITLE);
         for (int i = 0; i < Game.NUMBER_OF_PILES; i++) {
-            new PileView(this.controller, i).writeln();
+            new PileView(this.controller, i).write();
         }
         IO.writeln(Message.GAME_END);
         IO.writeln();

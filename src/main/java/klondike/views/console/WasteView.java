@@ -8,7 +8,7 @@ public class WasteView extends CardStackView {
         super(controller, Message.WASTE_TITLE);
     }
 
-    public void writeln() {
-        super.writeln(this.controller.peekWaste());
+    public void write() {
+        super.write(this.controller.peekWaste());
     }
 }

@@ -8,7 +8,7 @@ import klondike.utils.YesNoDialog;
 import klondike.views.View;
 import klondike.views.console.menu.PlayMenu;
 
-public class ConsoleView extends View {
+public class ConsoleView implements View {
 
     @Override
     public void interact(Controller controller) {

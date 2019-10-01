@@ -3,8 +3,8 @@ package klondike.views;
 import klondike.controllers.Controller;
 import klondike.controllers.ControllerVisitor;
 
-public abstract class View implements ControllerVisitor {
+public interface View extends ControllerVisitor {
 
-    public abstract void interact(Controller controller);
+    public void interact(Controller controller);
 
 }

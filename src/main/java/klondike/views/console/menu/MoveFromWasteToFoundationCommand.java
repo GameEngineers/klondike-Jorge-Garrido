@@ -3,6 +3,7 @@ package klondike.views.console.menu;
 import klondike.controllers.MoveController;
 import klondike.models.Error;
 import klondike.models.Suit;
+import klondike.utils.IO;
 
 public class MoveFromWasteToFoundationCommand extends Command {
 
@@ -12,7 +13,7 @@ public class MoveFromWasteToFoundationCommand extends Command {
 
     @Override
     protected Error move() {
-        Suit suit = SuitReader.read();
+        Suit suit = Suit.find(IO.readChar(Message.READ_SUIT, Suit.initials()));
         return this.moveController.moveFromWasteToFoundation(suit);
     }
 }

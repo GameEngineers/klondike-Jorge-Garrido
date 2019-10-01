@@ -5,7 +5,7 @@ import klondike.models.Error;
 import klondike.models.Suit;
 import klondike.utils.IO;
 
-public class MoveFromWasteToFoundationCommand extends Command {
+public class MoveFromWasteToFoundationCommand extends OptionCommand {
 
     public MoveFromWasteToFoundationCommand(MoveController moveController) {
         super(CommandTitle.WASTE2FOUNDATION_COMMAND.getTitle(), moveController);

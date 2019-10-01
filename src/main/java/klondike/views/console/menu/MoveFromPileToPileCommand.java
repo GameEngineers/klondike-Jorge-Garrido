@@ -8,7 +8,7 @@ import klondike.models.Number;
 import klondike.utils.ClosedInterval;
 import klondike.utils.IO;
 
-public class MoveFromPileToPileCommand extends Command {
+public class MoveFromPileToPileCommand extends OptionCommand {
 
     public MoveFromPileToPileCommand(MoveController moveController) {
         super(CommandTitle.PILE2PILE_COMMAND.getTitle(), moveController);

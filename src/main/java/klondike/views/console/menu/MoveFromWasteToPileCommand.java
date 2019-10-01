@@ -6,7 +6,7 @@ import klondike.models.Game;
 import klondike.utils.ClosedInterval;
 import klondike.utils.IO;
 
-public class MoveFromWasteToPileCommand extends Command {
+public class MoveFromWasteToPileCommand extends OptionCommand {
 
     public MoveFromWasteToPileCommand(MoveController moveController) {
         super(CommandTitle.WASTE2PILE_COMMAND.getTitle(), moveController);

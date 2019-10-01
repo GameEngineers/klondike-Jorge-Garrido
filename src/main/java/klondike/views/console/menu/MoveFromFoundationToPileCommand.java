@@ -7,7 +7,7 @@ import klondike.models.Suit;
 import klondike.utils.ClosedInterval;
 import klondike.utils.IO;
 
-public class MoveFromFoundationToPileCommand extends Command {
+public class MoveFromFoundationToPileCommand extends OptionCommand {
 
     public MoveFromFoundationToPileCommand(MoveController moveController) {
         super(CommandTitle.FOUNDATION2PILE_COMMAND.getTitle(), moveController);

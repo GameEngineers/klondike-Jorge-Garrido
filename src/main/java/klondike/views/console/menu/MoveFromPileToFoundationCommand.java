@@ -1,6 +1,5 @@
 package klondike.views.console.menu;
 
-import com.sun.xml.internal.bind.marshaller.MinimumEscapeHandler;
 import klondike.controllers.MoveController;
 import klondike.models.Error;
 import klondike.models.Game;
@@ -8,7 +7,7 @@ import klondike.models.Suit;
 import klondike.utils.ClosedInterval;
 import klondike.utils.IO;
 
-public class MoveFromPileToFoundationCommand extends Command {
+public class MoveFromPileToFoundationCommand extends OptionCommand {
 
     public MoveFromPileToFoundationCommand(MoveController moveController) {
         super(CommandTitle.PILE2FOUNDATION_COMMAND.getTitle(), moveController);

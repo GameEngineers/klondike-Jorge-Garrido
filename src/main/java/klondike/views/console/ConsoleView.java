@@ -6,7 +6,7 @@ import klondike.controllers.ResumeController;
 import klondike.controllers.StartController;
 import klondike.utils.YesNoDialog;
 import klondike.views.View;
-import klondike.views.console.menu.PlayMenu;
+import klondike.views.console.menu.MenuBuilder;
 
 public class ConsoleView implements View {
 
@@ -23,7 +23,7 @@ public class ConsoleView implements View {
 
     @Override
     public void visit(MoveController moveController) {
-        new PlayMenu(moveController).execute();
+        new MenuView(new MenuBuilder(moveController)).execute();
         new GameView(moveController).write();
     }
 

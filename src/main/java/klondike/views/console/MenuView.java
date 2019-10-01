@@ -1,21 +1,24 @@
-package klondike.utils;
+package klondike.views.console;
+
+import klondike.utils.ClosedInterval;
+import klondike.utils.IO;
+import klondike.views.console.menu.Builder;
+import klondike.views.console.menu.OptionCommand;
+import klondike.views.console.menu.MenuBuilder;
 
 import java.util.ArrayList;
 
-public abstract class Menu {
+public class MenuView {
 
     private static final String OPTION = "Choose an option: ";
-    private ArrayList<Command> commandList;
+    private ArrayList<OptionCommand> commands;
 
-    public Menu() {
-        this.commandList = new ArrayList<Command>();
+    public MenuView(Builder builder) {
+        assert builder != null;
+        this.commands = builder.getCommands();
     }
 
     public void execute() {
-        ArrayList<Command> commands = new ArrayList<Command>();
-        for (int i = 0; i < this.commandList.size(); i++) {
-            commands.add(this.commandList.get(i));
-        }
         boolean error;
         int option;
         do {
@@ -32,9 +35,4 @@ public abstract class Menu {
         } while (error);
         commands.get(option).execute();
     }
-
-    protected void addCommand(Command command) {
-        this.commandList.add(command);
-    }
-
 }

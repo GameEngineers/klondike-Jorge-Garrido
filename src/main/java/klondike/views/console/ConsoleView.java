@@ -1,12 +1,9 @@
 package klondike.views.console;
 
-import klondike.controllers.Controller;
-import klondike.controllers.MoveController;
-import klondike.controllers.ResumeController;
-import klondike.controllers.StartController;
+import klondike.controllers.*;
 import klondike.utils.YesNoDialog;
 import klondike.views.View;
-import klondike.views.console.menu.MenuBuilder;
+import klondike.views.console.menu.MenuCommandBuilder;
 
 public class ConsoleView implements View {
 
@@ -22,13 +19,42 @@ public class ConsoleView implements View {
     }
 
     @Override
-    public void visit(MoveController moveController) {
-        new MenuView(new MenuBuilder(moveController)).execute();
-        new GameView(moveController).write();
+    public void visit(ResumeController resumeController) {
+        resumeController.resume(new YesNoDialog().read(Message.RESUME));
     }
 
     @Override
-    public void visit(ResumeController resumeController) {
-        resumeController.resume(new YesNoDialog().read(Message.RESUME));
+    public void visit(MoveFromFoundationToPileController moveFromFoundationToPileController) {
+
+    }
+
+    @Override
+    public void visit(MoveFromPileToFoundationController moveFromPileToFoundationController) {
+
+    }
+
+    @Override
+    public void visit(MoveFromPileToPileController moveFromPileToPileController) {
+
+    }
+
+    @Override
+    public void visit(MoveFromStockToWasteController moveFromStockToWasteController) {
+
+    }
+
+    @Override
+    public void visit(MoveFromWasteToFoundationController moveFromWasteToFoundationController) {
+
+    }
+
+    @Override
+    public void visit(MoveFromWasteToPileController moveFromWasteToPileController) {
+
+    }
+
+    @Override
+    public void visit(MoveFromWasteToStockController moveFromWasteToStockController) {
+
     }
 }

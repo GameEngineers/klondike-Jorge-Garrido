@@ -14,6 +14,8 @@ public class Game {
 
     private List<Pile> piles;
 
+    private State state;
+
     public Game() {
         this.clear();
     }

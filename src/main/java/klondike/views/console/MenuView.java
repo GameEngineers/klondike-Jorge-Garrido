@@ -2,9 +2,8 @@ package klondike.views.console;
 
 import klondike.utils.ClosedInterval;
 import klondike.utils.IO;
-import klondike.views.console.menu.Builder;
+import klondike.views.console.menu.CommandBuilder;
 import klondike.views.console.menu.OptionCommand;
-import klondike.views.console.menu.MenuBuilder;
 
 import java.util.ArrayList;
 
@@ -13,7 +12,7 @@ public class MenuView {
     private static final String OPTION = "Choose an option: ";
     private ArrayList<OptionCommand> commands;
 
-    public MenuView(Builder builder) {
+    public MenuView(CommandBuilder builder) {
         assert builder != null;
         this.commands = builder.getCommands();
     }

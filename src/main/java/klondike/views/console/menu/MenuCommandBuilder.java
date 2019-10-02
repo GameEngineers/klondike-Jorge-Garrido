@@ -4,11 +4,11 @@ import klondike.controllers.MoveController;
 
 import java.util.ArrayList;
 
-public class MenuBuilder implements Builder {
+public class MenuCommandBuilder implements CommandBuilder {
 
     private ArrayList<OptionCommand> commands;
 
-    public MenuBuilder(MoveController moveController) {
+    public MenuCommandBuilder(MoveController moveController) {
         commands = new ArrayList<>();
         commands.add(new MoveFromStockToWasteCommand(moveController));
         commands.add(new MoveFromWasteToStockCommand(moveController));

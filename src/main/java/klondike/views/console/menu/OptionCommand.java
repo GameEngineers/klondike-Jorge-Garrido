@@ -6,11 +6,8 @@ import klondike.utils.IO;
 
 public abstract class OptionCommand extends Command {
 
-    protected MoveController moveController;
-
-    protected OptionCommand(String title, MoveController moveController) {
+    protected OptionCommand(String title) {
         super(title);
-        this.moveController = moveController;
     }
 
     @Override

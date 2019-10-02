@@ -1,5 +1,9 @@
-package klondike.controllers;
+package klondike.Logic;
 
+import klondike.controllers.Controller;
+import klondike.controllers.MoveController;
+import klondike.controllers.ResumeController;
+import klondike.controllers.StartController;
 import klondike.models.Game;
 import klondike.models.State;
 import klondike.models.StateValue;
@@ -19,9 +23,9 @@ public class Logic {
         this.state = new State();
         this.game = new Game();
         this.controllers = new HashMap<>();
-        this.controllers.put(StateValue.INITIAL, new StartController(this.game, this.state));
-        this.controllers.put(StateValue.IN_GAME, new MoveController(this.game, this.state));
-        this.controllers.put(StateValue.FINAL, new ResumeController(this.game, this.state));
+        this.controllers.put(StateValue.INITIAL, new StartController(this.game));
+        this.controllers.put(StateValue.IN_GAME, new MoveController(this.game));
+        this.controllers.put(StateValue.FINAL, new ResumeController(this.game));
         this.controllers.put(StateValue.EXIT, null);
     }
 

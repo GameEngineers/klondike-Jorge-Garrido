@@ -11,11 +11,8 @@ public abstract class Controller {
 
     protected Game game;
 
-    protected State state;
-
-    Controller(Game game, State state) {
+    Controller(Game game) {
         this.game = game;
-        this.state = state;
     }
 
     public Card peekStock() {

@@ -10,3 +10,4 @@ https://github.com/iraticasi/klondike/tree/mvp.pm+doubleDispatching
 - YAGNI: Eliminamos clases PileReader y SuitReader...
 - Clase abstracta View pasa a ser una Interface, Mejoramos la extension de la aplicación
 - Se cambia PlayMenu por MenuBuilder, se incluye interface, y se construyen las opciones de menú con este.
+- Metodo plantilla en OptionCommand, aplicado con readFromPile(..) y readSuit()

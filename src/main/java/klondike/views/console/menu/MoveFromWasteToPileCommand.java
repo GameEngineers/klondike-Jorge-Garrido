@@ -14,7 +14,7 @@ public class MoveFromWasteToPileCommand extends OptionCommand {
 
     @Override
     protected Error move() {
-        int pileIndex = IO.readInt(Message.READ_PILE_INDEX.replace(Message.TITLE_TAG, Message.DESTINATION), new ClosedInterval(1, Game.NUMBER_OF_PILES)) - 1;
+        int pileIndex = this.readFromPile(Message.DESTINATION);
         return this.moveController.moveFromWasteToPile(pileIndex);
     }
 }

@@ -15,8 +15,8 @@ public class MoveFromFoundationToPileCommand extends OptionCommand {
 
     @Override
     protected Error move() {
-        Suit suit = Suit.find(IO.readChar(Message.READ_SUIT, Suit.initials()));
-        int pileIndex = IO.readInt(Message.READ_PILE_INDEX.replace(Message.TITLE_TAG, Message.DESTINATION), new ClosedInterval(1, Game.NUMBER_OF_PILES)) - 1;
+        Suit suit = this.readSuit();
+        int pileIndex = this.readFromPile(Message.DESTINATION);
         return this.moveController.moveFromFoundationToPile(suit, pileIndex);
     }
 }

@@ -13,7 +13,7 @@ public class MoveFromWasteToFoundationCommand extends OptionCommand {
 
     @Override
     protected Error move() {
-        Suit suit = Suit.find(IO.readChar(Message.READ_SUIT, Suit.initials()));
+        Suit suit = this.readSuit();
         return this.moveController.moveFromWasteToFoundation(suit);
     }
 }

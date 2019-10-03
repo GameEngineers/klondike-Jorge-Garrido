@@ -2,7 +2,6 @@ package klondike.controllers;
 
 import klondike.models.Card;
 import klondike.models.Game;
-import klondike.models.State;
 import klondike.models.Suit;
 
 import java.util.Stack;
@@ -36,6 +35,6 @@ public abstract class Controller {
         return this.game.getNumberOfFaceUpCardsInPile(index);
     }
 
-    public abstract void accept(ControllerVisitor controllerVisitor);
+    public abstract void accept(MoveControllerVisitor moveControllerVisitor);
 
 }

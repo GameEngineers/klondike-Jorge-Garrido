@@ -2,7 +2,6 @@ package klondike.controllers;
 
 import klondike.models.Error;
 import klondike.models.Game;
-import klondike.models.State;
 
 public class MoveFromWasteToStockController extends MoveController {
 
@@ -14,7 +13,7 @@ public class MoveFromWasteToStockController extends MoveController {
         return this.game.moveFromWasteToStock();
     }
 
-    public void accept(ControllerVisitor controllerVisitor) {
-        controllerVisitor.visit(this);
+    public void accept(MoveControllerVisitor moveControllerVisitor) {
+        moveControllerVisitor.visit(this);
     }
 }

@@ -1,10 +1,6 @@
 package klondike.controllers;
 
-public interface ControllerVisitor {
-
-    void visit(StartController startController);
-
-    void visit(ResumeController resumeController);
+public interface MoveControllerVisitor {
 
     void visit(MoveFromFoundationToPileController moveFromFoundationToPileController);
 

@@ -14,7 +14,7 @@ public class MoveFromFoundationToPileController extends MoveController {
         return this.game.moveFromFoundationToPile(suit, pileIndex);
     }
 
-    public void accept(ControllerVisitor controllerVisitor) {
-        controllerVisitor.visit(this);
+    public void accept(MoveControllerVisitor moveControllerVisitor) {
+        moveControllerVisitor.visit(this);
     }
 }

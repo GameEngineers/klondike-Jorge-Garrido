@@ -1,7 +1,6 @@
 package klondike.controllers;
 
 import klondike.models.Game;
-import klondike.models.State;
 
 public class ResumeController extends Controller {
 
@@ -19,7 +18,7 @@ public class ResumeController extends Controller {
     }
 
     @Override
-    public void accept(ControllerVisitor controllerVisitor) {
-        controllerVisitor.visit(this);
+    public void accept(MoveControllerVisitor moveControllerVisitor) {
+        moveControllerVisitor.visit(this);
     }
 }

@@ -24,7 +24,7 @@ public class GameView {
             new FoundationView(this.controller, suit).write();
         }
         IO.writeln(Message.PILES_TITLE);
-        for (int i = 0; i < Game.NUMBER_OF_PILES; i++) {
+        for (int i = 0; i < controller.getNumberOfPiles(); i++) {
             new PileView(this.controller, i).write();
         }
         IO.writeln(Message.GAME_END);

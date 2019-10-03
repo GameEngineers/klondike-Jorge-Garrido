@@ -25,7 +25,7 @@ public abstract class OptionCommand extends Command {
     }
 
     protected int readFromPile(String message){
-        return IO.readInt(Message.READ_PILE_INDEX.replace(Message.TITLE_TAG, message), new ClosedInterval(1, Game.NUMBER_OF_PILES)) - 1;
+        return IO.readInt(Message.READ_PILE_INDEX.replace(Message.TITLE_TAG, message), new ClosedInterval(1, moveController.getNumberOfPiles())) - 1;
     }
 
     protected Suit readSuit(){

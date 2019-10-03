@@ -30,6 +30,10 @@ public abstract class Controller {
         return this.game.peekFoundation(suit);
     }
 
+    public int getNumberOfPiles(){
+        return Game.NUMBER_OF_PILES;
+    }
+
 
     public Stack<Card> getPileCards(int index) {
         return this.game.getPileCards(index);
